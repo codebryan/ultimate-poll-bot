@@ -1,0 +1,364 @@
+poll_types:
+  single_vote: Single vote
+  doodle: Doodle
+  block_vote: Block vote
+  limited_vote: Limited vote
+  cumulative_vote: Cumulative vote
+  count_vote: Unlimited votes
+
+list:
+  polls: 點選任何按鈕管理此投票
+  no_polls: 您沒有任何開啟的投票
+  no_closed_polls: 你沒有任何關閉的投票
+
+admin:
+  not_allowed: 你沒有此操作權限，只有管理者可以!
+
+datepicker:
+  open:  開啟日期選單
+  pick_date: 選這一天
+  due_date: 設定到期日期
+
+poll:
+  anonymous: Poll is anonymous!
+  results_not_visible: Results are not visible, until poll is closed!
+  vote_times: "\nEvery user can vote *%{amount} times*"
+  due: "\n📅 This poll is due at: %{date}"
+  closed: "\n⚠️ *This poll is closed* ⚠️"
+  own_poll: "Create *your own* poll over [here](https://t.me/ultimate_pollbot)"
+  many_users_voted: "*%{count} users* voted so far"
+  one_user_voted: "*One user* voted so far"
+  total_votes: " (%{count} votes)"
+  remaining_votes: "\nRemaining votes:"
+  remaining_votes_user: "%{name}: %{count} votes"
+  summarized_users: "and %{count} other people."
+  too_many_votes: |
+        ⚠️ *Too many votes in the last minute:* ⚠️
+        Your votes will still be registered, but this message will only update every 2 seconds.
+        (Telegram doesn't allow to send/update more than a certain amount of messages per minute in a group by a bot.)
+
+deleted:
+  poll: This poll has been permanently deleted.
+  polls: All polls have been deleted
+  closed_polls: All closed polls have been deleted
+
+callback:
+  error: An error occurred. It'll be fixed soon!
+  closed: Poll closed
+  cannot_reopen: Poll cannot be reopened
+  cloned: Poll cloned
+  deleted: Poll deleted
+  poll_created: The poll has already been created
+  poll_already_created: The poll has already been created
+  poll_no_longer_exists: This poll no longer exists.
+  votes_removed: All votes have been removed
+  anonymity_changed: Anonymity setting changed
+  visibility_changed: Visibility setting changed
+  date_changed: "Date changed: %{date}"
+  date_already_picked: Date already picked
+  date_picked: "Date picked: %{date}"
+  due_date_in_past: The due date is in the past
+  vote:
+    votes_left: '(%{count} left)!'
+    your_votes : ' Your votes:'
+    changed: Vote changed!
+    removed: Vote removed!
+    registered: Vote registered!
+    no_left: No votes left!
+    doodle_changed: Vote changed to %{vote_type}
+    doodle_registered: 'Vote registered (%{vote_type})'
+
+
+inline_query:
+  create_first: Click here to create a poll first ;)
+  create_poll: Click to create a new poll.
+
+notification:
+  one_week: "The poll *%{name}* will automatically close in one week"
+  one_day: "The poll *%{name}* will automatically close in one day"
+  six_hours: "The poll *%{name}* will automatically close in six hours"
+  closed: "The poll *%{name}* is now closed"
+
+keyboard:
+  done: Done
+  close: Close
+  back: Back
+  cancel: Cancel
+  delete: ❌ Delete
+  reset: 🔨 Reset
+  clone: 🧬 Clone
+  reopen: 🔓 Reopen poll
+  share: Share this poll
+  close_poll: 🔒 Close
+  settings: ⚙️ Settings
+  change_language: 🌐 Change language
+  vote: ✉️ Vote
+  permanently_close: ⚠️ Permanently close poll! ⚠️
+  permanently_delete: ⚠️ Permanently delete poll! ⚠️
+  permanently_anonymize: ⚠️ Permanently anonymize poll! ⚠️
+  anonymize: 🔍 Make votes anonymous
+  due_date: 📅 Set due date
+  sorting: 📋 Sorting settings
+  hide_percentage: ○% Hide percentage
+  show_percentage: ○% Show percentage
+  new_option: ＋ Add a new option
+  remove_option: － Remove options
+  forbid_user_options: 🍺 Forbid users to add new options
+  allow_user_options: 🍻 Allow users to add new options
+  order_users: Order users %{name}
+  order_options: Order options %{name}
+  show_results: View full results
+  vote_with_count: '%{option_name} (%{count} votes)'
+  help:
+    creation: Creation
+    settings: Settings
+    notifications: Notifications
+    management: Management
+    languages: Languages
+    bugs: Bugs
+
+
+sorting:
+    user_chrono: chronologically
+    user_name: by name
+    option_chrono: chronologically
+    option_percentage: by percentage
+    option_name: by name
+    doodle_sorting: by answer
+
+settings:
+  poll_type: "*Poll type*: %{poll_type}"
+  language: "*Language*: %{language}"
+  anonymous: "*Anonymity*: Names are not visible"
+  not_anonymous: "*Anonymity*: Names are visible"
+  due_date: "*Due date*: %{date}"
+  no_due_date: "*Due date*: None"
+  results_visible: "*Visible results*: Results are directly visible"
+  results_not_visible: "*Visible results*: Results are not visible until poll is closed"
+  user_options: "*Custom user options*: Anyone can add new options"
+  no_user_options: "*Custom user options*: Only you can add new options"
+  percentage: "*Percentage*: Visible"
+  no_percentage: "*Percentage*: Hidden"
+  euro_date_format: "*Date format*: DD.MM.YYYY"
+  us_date_format: "*Date format*: YYYY-MM-DD"
+  user_sorting: "*User sorting*: %{name}"
+  option_sorting: "*Option sorting*: %{name}"
+  change_language: Just click on a language to change it for this poll.
+  anonymize: |
+    Do you really want to anonymize this poll?
+    ⚠️ This action is irrevertible. ⚠️
+  remove_options: Just click the buttons below to remove the unwanted options.
+
+management:
+  permanently_close: |
+    Do you really want to permanently close this poll?
+    The results will become visible, but people will on longer be able to vote
+    ⚠️ This action is irrevertible. ⚠️
+  delete: Do you really want to delete this poll?
+
+creation:
+  already_creating: You are already creating a poll. Cancel the previous poll creation first
+  description: Now send me the description
+  skip_description: Skip
+  not_allowed: You are no longer allowed to add new options
+  cancel: Cancel previous creation
+  vote_count_request: Send me the amount of allowed votes per user.
+
+  keyboard:
+    change: Change poll type
+    anonymity: Anonymize poll
+    no_anonymity: Display names in poll
+    results_visible: Permanently show results
+    results_not_visible: Hide results until poll is closed
+
+  option:
+    next: "Send *another option*, pick a date and add it as an option, or click *Done* when you're finished."
+    first: |
+      Please send me an option. You can send multiple options at once, each option on a new line.
+      You can also add a description behind a hyphen.
+      For instance `Burger - because it is tasty`
+    no_new: ❌ No new option has been added
+    single_added: "*%{option}* has been added. 👍\nSend *another option*, pick a date and add it as an option, or click *Done* when you're finished."
+    multiple_added: "Options have been added:"
+    finished: All options have already been added
+
+  poll_type_help: |
+    Current poll type: *%{poll_type}*
+
+    👍 *Single Vote:*
+    Every user gets a single vote. The default and normal voting mode.
+
+    📅 *Doodle:*
+    Users can vote for `yes`, `no`, or `maybe` for each option. Great for finding a date.
+
+    🎮 *Block Vote:*
+    Every user can vote for all (or less) options. Useful for finding the most wanted options in a group, e.g. games that should be played on a LAN-Party.
+
+    🎮 *Limited Vote:*
+    Every user gets a fixed number of votes they can distribute, but only once per option.
+    Pretty much like block vote, but people need to prioritize.
+    This mode is good for limiting the amount of possible winners e.g. if you only want max 4 games on your LAN-Party.
+
+    📊 *Cumulative Vote:*
+    Every user gets a fixed number of votes they can distribute as they like (even multiple votes per option).
+    This mode has a little more depth than limited vote, since it allows users to vote on a single option multiple times.
+
+    🛒 *Unlimited votes* (or the shopping list) 😎
+    Every user can vote as often on any option as they want.
+    This is great if you want to, for instance, determine how much stuff everyone wants for the next festival trip.
+
+  results_not_visible: Results are not visible until poll is closed
+  results_visible: Results are directly visible
+  anonymity: Names are not visible
+  no_anonymity: Names are visible
+  init_text: |
+    Hey there!
+    You are about to create a new poll 👌
+
+    The current settings for this poll are:
+
+    *Poll type*: %{poll_type}
+    *Anonymity*: %{anonymity}
+    *Visible results*: %{results_visible}
+
+    Please follow these steps:
+    1. Configure the poll to your needs 🙂
+    2. 👇 Send me the name of this poll. 👇
+  datepicker_text: |
+    *Datepicker:*
+    To add date, select it and click *Pick this date*.
+    Click *Done* when you're finished.
+
+    *Current options:*
+  error:
+    limit_bigger_zero: Please send me a number bigger than 0
+    limit_between: Please send me a number between 1 and %{limit}
+    markdown: |
+      Please don't use markdown symbols in your names, description or options. Such symbols are `_`,`*` and `[`.
+      Please send me the message again without these symbols.
+
+external:
+  canceled: Canceled
+  notification:
+    pick_poll: Pick the correct poll to activate notifications
+    activated: Notifications activated
+    new_notification_board: Please use the newer notification board.
+
+delete:
+  doesnt_exist: Poll to delete doesn't exist
+  previous_deleted: Previous poll deleted. You can now /create a new poll.
+
+user:
+  language_changed: Language changed
+
+misc:
+  donation: |
+    Hello there!
+
+    My name is Arne Beer (@Nukesor). I'm the sole developer of the Ultimate PollBot.
+
+    The idea of writing the Ultimate PollBot was formed, when my friends couldn't decide again where we should go for lunch.
+    This happened so many times already and we desperately needed a good and stable solution inside of telegram for this problem!
+    That's how the ULTIMATE PollBot was born.
+
+    Every line of code in this project was written in my leisure time and is completely for free.
+    This project is non-profit, open-source on [Github](https://github.com/Nukesor/ultimate-poll-bot) and hosted on a server I'm renting from my own money.
+
+    Right now I usually invest between 2-10 hours a week into developing and maintaining my projects and I would love to get some support, since I'm doing this in a large part for you out there.
+
+    I really appreciate anything that helps me out and that keeps my server and me running ☺️.
+
+    If you like this project, check out my [Patreon page](https://www.patreon.com/nukesor) or support me via [Paypal](https://www.paypal.me/arnebeer).
+    If you have any questions, stop by my [support group](https://t.me/nukesors_projects).
+
+    Have great day!
+  start: |
+    🌟Welcome to the *ULTIMATE* PollBot 🌟
+
+    Just type /create or click the button below to start creating polls. Everything is explained underway.
+
+    🌐 You can pick another /language 🌐
+    ❓Click /help for more explanations ❓
+
+    If you like the project, stop by my [support group](https://t.me/nukesors_projects) or check out my [Patreon page](https://www.patreon.com/nukesor).
+    This bot is open-source on [Github](https://github.com/Nukesor/ultimate-poll-bot).
+
+
+  help:
+    intro: |
+      There are quite a few settings for your polls.
+      Just pick the category you're interested in or just read everything 😉.
+
+    creation: |
+      🌟*Creation:*
+
+      To create a new poll, just write or click /create.
+      For each poll you can specify several initial settings
+
+      *Poll type:* The various types are explained in detail in the poll type menu.
+      *Anonymity:* You can anonymize your poll, which results in no names being displayed! This is permanent and for all parties.
+      *Visible results:* In this mode, votes only become visible after closing the poll. This is great to avoid the possibility of [tactical voting](https://en.wikipedia.org/wiki/Tactical_voting) and the influence of [Anchoring](https://en.wikipedia.org/wiki/Anchoring)
+
+      -> *Attention: A closed poll with invisible results stays closed!:*
+      Reopening a poll would allow a user, specifically the poll creator, to look at the votes, and place his own vote in a manner, that would result in a possible advantage for him (tactical voting).
+
+    settings: |
+      ⚙️ *Settings:*
+
+      Further settings of a poll can be adjusted after the poll has been created:
+
+      *Anonymity:* A poll can be made anonymous retrospectively.
+      *Percentage:* The percentage line of options can be hidden in the settings menu.
+      *Options:* New options can be added and existing options can be removed in the settings menu.
+      *User Options:* You can allow other users to add options to your poll.
+      *Order:* The order in which user names and options are displayed in the results can be changed.
+      *Due date:* A due date at which the poll will be automatically closed can be set.
+
+    notifications: |
+      📣 *Notifications:*
+
+      If you enable notifications for your chat, the bot will send a message 1 day, 6 hours, and 1 hour before the poll closes.
+      This is just a feature to remind everyone in a group that a poll will close soon, and to make it easy to find the poll message again 😉.
+
+      To enable notifications in a chat follow these steps:
+      *1.* Create a poll
+      *2.* Set a due date in the settings menu
+      *3.* Go to the chat you want to be notified (The pollbot needs added to the group, before the poll is shared or you need to share it again)
+      *4.* Reply with /notify to the poll message you selected via @ultimate\_pollbot
+      *5.* Pick the correct poll
+
+      This whole procedure is unhappily overly complicated, since telegram doesn't allow to detect messages from bots in groups 😐.
+      Thereby we don't know which poll is posted in which group and everything needs to be done manually.
+
+    management: |
+      🕰 *Find old polls:*
+
+      There are two commands /list and /list\_closed, which allow you to find and manage your old polls.
+
+
+      ⚠️ *Delete polls:*
+
+      You can delete individual polls in the respective poll menus.
+      There's also the /delete\_closed command, which deletes all closed polls and the /delete\_all command which deletes ALL polls.
+
+    languages: |
+      🌐 *Language:*
+
+      Ultimate pollbot supports multiple languages, but only English is officially maintained.
+      To add a new language, go to the Github repository, copy the `english.yml`, rename it to your language and adjust all values.
+      Be careful to not fuck up any Markdown styling (`**`, `__`, `${}`), otherwise stuff will break for your language.
+      If anything breaks, because of broken translations, please fix it on your own. I will not investigate these issues.
+      The multi language support is a community driven feature I happily support, but I cannot support multiple languages on my own.
+
+    bugs: |
+      *Known Bugs:*
+      *1.* Polls with too many votes don't update anymore. This is due to telegrams limitation of 4096 characters per message. A fix is in progress. The current workaround is to make the poll anonymous and thereby reduce the length of the message.
+
+      ⚠️ *There is an unknown bug that won't go away!!* 😩
+
+      I usually get a notification as soon as something breaks, but there might be some bugs that go unnoticed!
+      In case a bug isn't fixed in a day or two, please write a ticket on [Github](https://github.com/Nukesor/ultimate-poll-bot) or stop by my [support group](https://t.me/nukesors_projects).
+
+  error: |
+    An unknown error occurred. I probably just got a notification about this and I'll try to fix it as quickly as possible.
+    In case the bug isn't fixed in a day or two, please write a ticket on [Github](https://github.com/Nukesor/ultimate-poll-bot) or stop by my [support group](https://t.me/nukesors_projects).
